@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/rc_front/node_modules
+/rc_front/.pnp
+/rc_front/.pnp.js
+
+# testing
+/rc_front/coverage
+
+# production
+/rc_front/build
+
+# misc
+/rc_front/.DS_Store
+/rc_front/.env.local
+/rc_front/.env.development.local
+/rc_front/.env.test.local
+/rc_front/.env.production.local
+
+/rc_front/npm-debug.log*
+/rc_front/yarn-debug.log*
+/rc_front/yarn-error.log*

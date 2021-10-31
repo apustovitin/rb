@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+
+.recipe {
+  padding: 20px;
+  margin-top: 5px;
+  width: 100%;
+  background-color: var(#{--components-background-default});
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.recipe:hover {
+  background-color: black;
+  color: white;
+}
