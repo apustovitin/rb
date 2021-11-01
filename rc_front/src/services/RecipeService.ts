@@ -60,7 +60,7 @@ export const recipeAPI = createApi({
     }),
     updateRecipe: build.mutation<IRecipe, IRecipe>({
       query: (recipe) => ({
-        url: '/recipes/${recipe.id}',
+        url: `/recipes/${recipe.id}`,
         method: 'PUT',
         body: recipe
       }),
@@ -68,7 +68,7 @@ export const recipeAPI = createApi({
     }),
     deleteRecipe: build.mutation<IRecipe, IRecipe>({
       query: (recipe) => ({
-        url: '/recipes/${recipe.id}',
+        url: `/recipes/${recipe.id}`,
         method: 'DELETE',
         body: recipe
       }),

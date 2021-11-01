@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import {recipeAPI} from "../../../../services/RecipeService";
 import RecipeItem from "../../../../shared/components/RecipeItem/RecipeItem";
 import {IRecipe} from "../../../../models/IRecipe";
 
 const RecipeContainer = () => {
-  const [options, setOptions] = useState<Array<number>>([10, 0])
-  const {data: recipes, error, isLoading, refetch} = recipeAPI.useFetchRecipesPageQuery(options);
+  const {data: recipes, error, isLoading} = recipeAPI.useFetchRecipesPageQuery([10, 0]);
   console.log(recipes)
   return (
     <div>

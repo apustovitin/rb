@@ -9,7 +9,7 @@ const FilteredRecipes = () => {
   const search = location.search;
   const query = new URLSearchParams(search);
   const category = query.get('category');
-  const {data: recipes, error, isLoading, refetch} = recipeAPI.useFetchFiltredRecipesQuery([category]);
+  const {data: recipes, error, isLoading} = recipeAPI.useFetchFiltredRecipesQuery([category]);
   console.log(recipes)
 
   return (

@@ -15,10 +15,10 @@ interface IOptionsItem {
 
 export const Header = () => {
   const history = useHistory();
-  const {data: categories, error, isLoading, refetch} = recipeAPI.useFetchAllCategoriesQuery('');
+  const {data: categories} = recipeAPI.useFetchAllCategoriesQuery('');
   console.log(categories)
   const options: Array<IOptionsItem> = [];
-  categories && categories.results.map((category: ICategory) => {
+  categories && categories.results.forEach((category: ICategory) => {
     options.push({value: category.id, label: category.category});
   })
 
@@ -44,6 +44,10 @@ export const Header = () => {
     history.push(`/`);
   };
 
+  const clickSwagerHandler = () => {
+    history.push(`/openapi/`);
+  };
+
   return (
     <header className={s.header}>
       <div className={s.logo_wrapper}>
@@ -53,6 +57,9 @@ export const Header = () => {
         <div className={s.title}>Recipes App</div>
       </div>
       <div className={s.selector_wrapper}>
+        <div className={s.swagger_button}>
+          <Button onClick={clickSwagerHandler} variant="outline-dark">Swagger</Button>
+        </div>
         <div className={s.home_button}>
           <Button onClick={clickHandler} variant="outline-dark">Home</Button>
         </div>
